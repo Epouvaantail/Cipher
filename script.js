@@ -4,7 +4,8 @@ let btn= document.querySelector('#enter');
 btn.addEventListener('click', function() {
     let s = parseInt(keyInput.value);
     let text = wordInput.value;
-    document.write("Cipher: " + encrypt(s, text) + "<br>");
+    document.querySelector('#result').innerHTML=`Result: ${encrypt(s, text)}`
+    // document.write("Cipher: " + encrypt(s, text) + "<br>");
 })
     // Encrypts text using a shift on s
    function encrypt(s, text) {
