@@ -1,3 +1,60 @@
 body {
     background-color: #252525;
+    font-family:'Times New Roman', Times, serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    border: 3px inset #252525;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.923) -6px 6px;
+    transition: 1s;
+}
+
+form:hover {
+    box-shadow: rgba(0, 0, 0, 0.923) 6px -6px, rgba(0, 0, 0, 0.823) 12px -12px, rgba(0, 0, 0, 0.723) 18px -18px, rgba(0, 0, 0, 0.623) 24px -24px;
+    margin: 1%;
+}
+
+button {
+    width: 70px;
+    margin: 5px;
+    background-color: whitesmoke;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.4) -1px 1px, rgba(87, 87, 87, 0.3) -3px 3px, rgba(135, 134, 134, 0.2) -5px 5px;
+    transition: 1.15s;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+input {
+    width: 80%;
+    margin: 10px;
+    border: 3px solid #252525;
+    background-color: whitesmoke;
+    color: #252525;
+}
+
+label {
+    margin-bottom: -16px;
+    margin-left: -63%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+p{
+    margin: auto;
+    color: whitesmoke;
 }
