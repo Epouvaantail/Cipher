@@ -55,7 +55,7 @@ function decrypt(text) {
             result += ch;
         }
       }
-      result += "/"
+      result += "<br>"
     }
   }
   else {
