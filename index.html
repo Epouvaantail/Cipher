@@ -12,18 +12,21 @@
         <img src="./logo.png"/>
     </header>
     <main>
-        <div id="encrypt">
+        <form id="encrypt" onsubmit="return false;">
             <h1>Encrypt</h1>
-            <input id="key" name="key" value="" type="number" placeholder="enter a number as a key"></input>
-            <input id="word" name="word" value="" placeholder="enter a word"></input>
+            <label>Number</label>
+            <input id="key" name="key" value="" type="number" min="0" placeholder="enter a number as a key"></input>
+            <label>word</label>
+            <input id="word" name="word" value="" type="text" placeholder="enter a word"></input>
             <button id="enter">Enter</button>
-        </div>
-        <div id="decrypt">
+        </form>
+        <form id="decrypt" onsubmit="return false;">
             <h1>Decrypt</h1>
-            <input id="word2" name="word2" value="" placeholder="enter a word"></input>
+            <label>word</label>
+            <input id="word2" name="word2" value="" type="text" placeholder="enter a crypted word"></input>
             <button id="enter2">Enter</button>
-        </div>
+        </form>
+        <p id="result">Result:</p>
     </main>
-    <p id="result">Result:</p>
 </body>
 </html>
