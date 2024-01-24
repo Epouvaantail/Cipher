@@ -18,7 +18,7 @@ btn2.addEventListener('click', function() {
  // Encrypts text using a shift on s
 function encrypt(s, text) {
   let result=""
-  // si le text contient que des lettres de l'alphabet
+  // if the text contain only letter from latin aplhabet
   if (text.match(/[a-z]/i)) {
     for (let i = 0; i < text.length; i++) {
       let char = text[i].toUpperCase();
@@ -41,7 +41,7 @@ function encrypt(s, text) {
 // Decrypts text
 function decrypt(text) {
   let result=""
-  // si le text contient que des lettres de l'alphabet
+  // if the text contain only letter from latin aplhabet
   if (text.match(/[a-z]/i)) {
     for (let j = 0;j < 26; j++) {
       for (let i = 0; i < text.length; i++) {
