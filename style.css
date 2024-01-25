@@ -10,18 +10,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #D9D9D9;
     border: 8px double black;
     padding-top: 30px;
     width: 50%;
     text-align: center;
+    background-image: url("Slice.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #D9D9D9;
     border: 3px inset #252525;
     width: 30%;
     margin-bottom: 30px;
@@ -34,10 +38,14 @@ form:hover {
     margin: 1%;
 }
 
+h1 {
+    text-shadow: #25252531 4px 3px;
+}
+
 button {
     width: 70px;
     margin: 5px;
-    background-color: whitesmoke;
+    background-color: #D9D9D9;
     font-weight: 700;
     box-shadow: rgba(0, 0, 0, 0.4) -1px 1px, rgba(87, 87, 87, 0.3) -3px 3px, rgba(135, 134, 134, 0.2) -5px 5px;
     transition: 1.15s;
@@ -51,14 +59,14 @@ input {
     width: 80%;
     margin: 10px;
     border: 3px solid #252525;
-    background-color: whitesmoke;
+    background-color: #D9D9D9;
     color: #252525;
 }
 
 label {
-    margin-bottom: -16px;
-    margin-left: -63%;
-    background-color: whitesmoke;
+    margin-bottom: -15px;
+    margin-left: -55%;
+    background-color: #D9D9D9;
     position: relative;
 }
 
