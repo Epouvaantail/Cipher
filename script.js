@@ -15,6 +15,19 @@ btn2.addEventListener('click', function() {
     document.querySelector('#result').innerHTML=`Result: ${decrypt(text)}`
 })
 
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
  // Encrypts text using a shift on s
 function encrypt(s, text) {
   let result=""
@@ -33,7 +46,7 @@ function encrypt(s, text) {
     }
   }
   else {
-    return
+    modal.style.display = "block";
   }
   return result;
 }
@@ -59,29 +72,7 @@ function decrypt(text) {
     }
   }
   else {
-    return
+    modal.style.display = "block"
   }
   return result;
-}
-
-var modal = document.getElementById("myModal");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-btn2.onclick = function() {
-  modal.style.display = "block"
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
