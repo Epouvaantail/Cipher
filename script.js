@@ -1,6 +1,6 @@
 let keyInput = document.querySelector('#key');
 let wordInput = document.querySelector('#word');
-let btn= document.querySelector('#enter');
+let btn = document.querySelector('#enter');
 btn.addEventListener('click', function() {
     let s = parseInt(keyInput.value);
     let text = wordInput.value;
@@ -13,6 +13,15 @@ let btn2 = document.querySelector('#enter2');
 btn2.addEventListener('click', function() {
     let text = wordInput2.value;
     document.querySelector('#result').innerHTML=`Result: ${decrypt(text)}`
+})
+
+let keyV = document.querySelector('#keyV');
+let wordV = document.querySelector('#wordV');
+let btnV = document.querySelector('#enterV');
+btnV.addEventListener('click', function() {
+  let s = keyV.value;
+  let text = wordV.value;
+  document.querySelector('#resultV').innerHTML=`Result: ${encryptV(s, text)}`
 })
 
 var modal = document.getElementById("myModal");
@@ -77,7 +86,7 @@ function decrypt(text) {
   return result;
 }
 
-function test(key, word) {
+function encryptV(key, word) {
   let code = [];
   key = key.toUpperCase()
   for(let i =0; i<key.length; i++) {
@@ -89,7 +98,6 @@ function test(key, word) {
   ar = ar.map(function(x) {
     return parseInt(x, 10);
   })
-  console.log(ar);
 
   let result=""
   if (word.match(/[a-z]/i)) {
@@ -110,20 +118,5 @@ function test(key, word) {
   else {
     alert("Failed")
   }
-  console.log(result)
   return result;
 }
-
-test("cache","Caesar")
-
-// Vigenere code prep
-
-// let text = "ABCD";
-// let code =[];
-// for(let i =0; i<text.length; i++) {
-//   code += text.charCodeAt([i]);
-//   code += ' ';
-// };
-// // code.pop();
-// console.log(code.split(' '));
-// document.getElementById("demo").innerHTML = code;
