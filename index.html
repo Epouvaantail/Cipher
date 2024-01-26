@@ -5,45 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Caesar Cipher</title>
+    <title>Cipher</title>
 </head>
 <body>
-    <header>
-        <img src="./logo.png"/>
-    </header>
     <main>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">X</span>
-                <p>
-                    <strong>Your word is not a word or contain a character that is not in the alphabet, or you didn't enter anything !</strong>
-                </p>
-              </div>
-        </div>
-        <p>
-            <strong>
-                In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, 
-                Caesar's code, or Caesar shift, is one of the simplest and most widely known encryption techniques. 
-                It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. 
-                For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. 
-                The method is named after Julius Caesar, who used it in his private correspondence.
-            </strong>
-        </p>
-        <form id="encrypt" onsubmit="return false;">
-            <h1>Encrypt</h1>
-            <label>Number</label>
-            <input id="key" name="key" value="" type="number" min="0" placeholder="enter a number as a key"></input>
-            <label>word</label>
-            <input id="word" name="word" value="" type="text" placeholder="enter a word"></input>
-            <button id="enter">Enter</button>
-        </form>
-        <form id="decrypt" onsubmit="return false;">
-            <h1>Decrypt</h1>
-            <label>word</label>
-            <input id="word2" name="word2" value="" type="text" placeholder="enter a crypted word"></input>
-            <button id="enter2">Enter</button>
-        </form>
-        <p id="result">Result:</p>
+        <section id="CaesarCipher">
+            <header>
+                <img class="Caesar" src="./logo.png"/>
+            </header>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">X</span>
+                    <p>
+                        <strong>Your word is not a word or contain a character that is not in the alphabet, or you didn't enter anything !</strong>
+                    </p>
+                  </div>
+            </div>
+            <p>
+                <strong>
+                    In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, 
+                    Caesar's code, or Caesar shift, is one of the simplest and most widely known encryption techniques. 
+                    It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. 
+                    For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. 
+                    The method is named after Julius Caesar, who used it in his private correspondence.
+                </strong>
+            </p>
+            <form id="encrypt" onsubmit="return false;">
+                <h1>Encrypt</h1>
+                <label>Number</label>
+                <input id="key" name="key" value="" type="number" min="0" placeholder="enter a number as a key"></input>
+                <label>word</label>
+                <input id="word" name="word" value="" type="text" placeholder="enter a word"></input>
+                <button id="enter">Enter</button>
+            </form>
+            <form id="decrypt" onsubmit="return false;">
+                <h1>Decrypt</h1>
+                <label>word</label>
+                <input id="word2" name="word2" value="" type="text" placeholder="enter a crypted word"></input>
+                <button id="enter2">Enter</button>
+            </form>
+            <p id="result">Result:</p>
+        </section>
+
+        <section id="VigenereCipher">
+            <header>
+                <img class="Vigenere" src="./logo.png"/>
+            </header>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">X</span>
+                    <p>
+                        <strong>Your word is not a word or contain a character that is not in the alphabet, or you didn't enter anything !</strong>
+                    </p>
+                  </div>
+            </div>
+            <p>
+                <strong>
+                    Vigenere
+                </strong>
+            </p>
+            <form id="encryptV" onsubmit="return false;">
+                <h1>Encrypt</h1>
+                <label>Number</label>
+                <input id="keyV" name="keyV" value="" type="text" placeholder="enter a word as a key"></input>
+                <label>word</label>
+                <input id="wordV" name="wordV" value="" type="text" placeholder="enter a word"></input>
+                <button id="enterV">Enter</button>
+            </form>
+            <p id="resultV">Result:</p>
+        </section>
     </main>
 </body>
 </html>
