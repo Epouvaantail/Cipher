@@ -46,6 +46,11 @@ main {
     filter: invert(1);
 }
 
+.Vigenere {
+    height: 70px;
+    filter: invert(1);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -90,7 +95,7 @@ input {
 
 label {
     margin-bottom: -15px;
-    margin-left: -55%;
+    margin-left: -70%;
     background-color: #D9D9D9;
     position: relative;
 }
