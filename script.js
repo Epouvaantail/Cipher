@@ -77,40 +77,44 @@ function decrypt(text) {
   return result;
 }
 
-// function test(key, word) {
-//   let code = [];
-//   key = key.toUpperCase()
-//   for(let i =0; i<key.length; i++) {
-//     code += key.charCodeAt([i])-65;
-//     code += ' ';
-//   };
-//   let ar = code.split(' ');
-//   ar.pop();
-//   ar = ar.map(function(x) {
-//     return parseInt(x, 10);
-//   })
-//   console.log(ar);
+function test(key, word) {
+  let code = [];
+  key = key.toUpperCase()
+  for(let i =0; i<key.length; i++) {
+    code += key.charCodeAt([i])-65;
+    code += ' ';
+  };
+  let ar = code.split(' ');
+  ar.pop();
+  ar = ar.map(function(x) {
+    return parseInt(x, 10);
+  })
+  console.log(ar);
 
-//   let result=""
-//   if (word.match(/[a-z]/i)) {
-//     for (let i = 0; i < word.length; i++) {
-//       let char = word[i].toUpperCase();
-//       let y = 0;
-//       for( let k = y; k < ar.length; k++) {
-//         let ch =  String.fromCharCode((char.charCodeAt(0) + ar[k]-65) % 26 + 65);
-//         console.log(ar[k]-65% 26 + 65)
-//         result += ch;
-//       }
-//     }
-//   }
-//   else {
-//     alert("dommzge")
-//   }
-//   console.log(result)
-//   return result;
-// }
+  let result=""
+  if (word.match(/[a-z]/i)) {
+    let k = 0;
+    for (let i = 0; i < word.length; i++) {
+      let char = word[i].toUpperCase();
+      for(k; k < ar.length; k++) {
+        let ch =  String.fromCharCode((char.charCodeAt(0) + ar[k]-65) % 26 + 65);
+        if ( ar[k+1] === undefined) {
+          k=-1;
+        }
+        result += ch;
+        k = k+1;
+        break;
+      }
+    }
+  }
+  else {
+    alert("Failed")
+  }
+  console.log(result)
+  return result;
+}
 
-// test("bonjour","bcb")
+test("cache","Caesar")
 
 // Vigenere code prep
 
