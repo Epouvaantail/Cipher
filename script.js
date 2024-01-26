@@ -68,7 +68,6 @@ function decrypt(text) {
             result += ch;
         }
       }
-      result += "<br>"
     }
   }
   else {
