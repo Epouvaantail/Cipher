@@ -49,7 +49,7 @@
 
         <section id="VigenereCipher">
             <header>
-                <img class="Vigenere" src="./logo.png"/>
+                <img class="Vigenere" src="./logoV.png"/>
             </header>
             <div id="myModal" class="modal">
                 <div class="modal-content">
@@ -61,12 +61,18 @@
             </div>
             <p>
                 <strong>
-                    Vigenere
+                    The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, 
+                    whose increment is determined by the corresponding letter of another text, the key. For example, if the plaintext is attacking tonight and the key is OCULORHINOLARINGOLOGY, 
+                    then the first letter a of the plaintext is shifted by 14 positions in the alphabet (because the first letter O of the key is the 14th letter of the alphabet, counting from 0), yielding o;
+                    the second letter t is shifted by 2 (because the second letter C of the key means 2) yielding v;
+                    the third letter t is shifted by 20 (U) yielding n, with wrap-around;
+                    and so on; yielding the message ovnlqbpvt hznzouz. If the recipient of the message knows the key, they can recover the plaintext by reversing this process.
+                    The Vigenère cipher is therefore a special case of a polyalphabetic substitution.
                 </strong>
             </p>
             <form id="encryptV" onsubmit="return false;">
                 <h1>Encrypt</h1>
-                <label>Number</label>
+                <label>Key</label>
                 <input id="keyV" name="keyV" value="" type="text" placeholder="enter a word as a key"></input>
                 <label>word</label>
                 <input id="wordV" name="wordV" value="" type="text" placeholder="enter a word"></input>
