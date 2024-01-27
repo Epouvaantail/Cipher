@@ -137,9 +137,18 @@ p{
     
     main {
         width: auto;
+        flex-direction: column;
     }
 
     form {
         width: auto;
+    }
+
+    #CaesarCipher {
+        width: 99%;
+    }
+    
+    #VigenereCipher {
+        width: 99%;
     }
 }
