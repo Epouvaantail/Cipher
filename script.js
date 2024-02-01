@@ -100,7 +100,7 @@ function encryptV(key, word) {
   })
 
   let result=""
-  if (word.match(/[a-z]/i)) {
+  if (word.match(/[a-z]/i) && key.match(/[a-z]/i)) {
     let k = 0;
     for (let i = 0; i < word.length; i++) {
       let char = word[i].toUpperCase();
