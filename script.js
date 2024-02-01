@@ -1,18 +1,18 @@
 let keyInput = document.querySelector('#key');
 let wordInput = document.querySelector('#word');
+
 let btn = document.querySelector('#enter');
 btn.addEventListener('click', function() {
-    let s = parseInt(keyInput.value);
-    let text = wordInput.value;
-    document.querySelector('#result').innerHTML=`Result: ${encrypt(s, text)}`
-    // document.write("Cipher: " + encrypt(s, text) + "<br>");
+  let s = parseInt(keyInput.value);
+  let text = wordInput.value;
+  document.querySelector('#result').innerHTML=`Result: ${encrypt(s, text)}`
 })
 
 let wordInput2 = document.querySelector('#word2');
 let btn2 = document.querySelector('#enter2');
 btn2.addEventListener('click', function() {
-    let text = wordInput2.value;
-    document.querySelector('#result').innerHTML=`Result: ${decrypt(text)}`
+  let text = wordInput2.value;
+  document.querySelector('#result').innerHTML=`Result: ${decrypt(text)}`
 })
 
 let keyV = document.querySelector('#keyV');
@@ -32,7 +32,7 @@ span.onclick = function() {
 }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
   }
 }
@@ -116,7 +116,7 @@ function encryptV(key, word) {
     }
   }
   else {
-    alert("Failed")
+    modal.style.display = "block"
   }
   return result;
 }
