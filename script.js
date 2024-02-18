@@ -37,7 +37,7 @@ window.onclick = function(event) {
   }
 }
 
- // Encrypts text using a shift on s
+// Encrypts text using a shift on s (Caesar)
 function encrypt(s, text) {
   let result= ""
   // if the text contain only letter from latin aplhabet
@@ -60,7 +60,7 @@ function encrypt(s, text) {
   return result;
 }
 
-// Decrypts text
+// Decrypts text (Caesar)
 function decrypt(text) {
   let result= ""
   // if the text contain only letter from latin aplhabet
@@ -86,6 +86,7 @@ function decrypt(text) {
   return result;
 }
 
+// Encrypts text using a shift on key (Vigenere)
 function encryptV(key, word) {
   let code = [];
   key = key.toUpperCase()
